@@ -9,7 +9,8 @@ export interface IComponent {
     weight?:number;
     photo?: string,
     time?:string,
-    type?:string
-    type_id?:number
+    type?:string,
+    type_id?:number,
+    available?: number
 
 }

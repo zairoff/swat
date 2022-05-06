@@ -59,6 +59,7 @@ export class EditComponent implements OnInit {
     this.components = await this.api.getModelBomComponents(this.id)
     this.modelInfo = await this.api.getModelInfo(this.id)
     this.allComponents = await this.api.getComponentsAll()
+    console.log(this.components)
 
 
     console.log(this.components)

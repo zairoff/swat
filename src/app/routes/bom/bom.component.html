@@ -11,9 +11,6 @@
         <div class="field">
             <input type="text" *ngIf="newModel" placeholder="Model Comment" [(ngModel)]="newModel.comment" pInputText />
         </div>
-        <div class="field">
-            <input type="text" *ngIf="newModel" placeholder="Model Status" [(ngModel)]="newModel.status" pInputText />
-        </div>
         <div class="formgrid grid">
             <div class="field col">
                 <button pButton type="button" label="Cancel" (click)="cancelDlg()"></button>
@@ -31,7 +28,6 @@
                 <th>Name</th>
                 <th>Code</th>
                 <th>Comment</th>
-                <th>Status</th>
                 <th></th>
             </tr>
         </ng-template>
@@ -42,7 +38,6 @@
                 </td>
                 <td>{{model.code}}</td>
                 <td>{{model.comment}}</td>
-                <td>{{model.status}}</td>
                 <td>
                     <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2" (click)="editModel(model)"></button>
                     <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning" (click)="deleteModel(model)"></button>

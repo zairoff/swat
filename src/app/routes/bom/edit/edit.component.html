@@ -42,6 +42,8 @@
                 <th>Unit</th>
                 <th>Specs</th>
                 <th>Comment</th>
+                <th>Weight/Pcs</th>
+                <th>Weight/All</th>
                 <th>Photo</th>
                 <th pSortableColumn="type">Type <p-sortIcon field="type"></p-sortIcon></th>
                 <th></th>
@@ -58,6 +60,8 @@
                 <td>{{component.unit}}</td>
                 <td>{{component.specs}}</td>
                 <td>{{component.comment}}</td>
+                <td>{{component.weight}}</td>
+                <td>{{component.weight * component.quantity}}</td>
                 <td>
                     <p-image [src]="'assets/photo/' + component.photo" [preview]="true" [alt]="component.code"  width="100" class="shadow-4"></p-image>
 

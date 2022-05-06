@@ -8,7 +8,10 @@ const routes: Routes = [
 { path: 'bom/:id', loadChildren: () => import('./routes/bom/bom.module').then(m => m.BomModule) }, 
 { path: 'income', loadChildren: () => import('./routes/income/income.module').then(m => m.IncomeModule) }, 
 { path: 'outcome', loadChildren: () => import('./routes/outcome/outcome.module').then(m => m.OutcomeModule) },
-{ path: 'bom/edit/:id', loadChildren: () => import('./routes/bom/edit/edit.module').then(m => m.EditModule) }
+{ path: 'bom/edit/:id', loadChildren: () => import('./routes/bom/edit/edit.module').then(m => m.EditModule) },
+{ path: 'auth', loadChildren: () => import('./routes/auth/auth.module').then(m => m.AuthModule) },
+{ path: 'logout', loadChildren: () => import('./routes/logout/logout.module').then(m => m.LogoutModule) },
+{ path: 'income/gp', loadChildren: () => import('./routes/income/gp/gp.module').then(m => m.GpModule) }
 ];
 
 @NgModule({

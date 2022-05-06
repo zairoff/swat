@@ -17,6 +17,14 @@ export class ProductionapiService {
 
   constructor(public config: ConfigService, public http: HttpClient) { }
 
+  public async addComponentWarehouse(body:any){
+    return new Promise<any>((resolve) => {
+      this.http.post<any>(this.config.serverDomenName+'/income', body).subscribe(e=>{
+          resolve(e);
+        })
+      })
+    }
+
   public async addModelBomComponents(body:any){
     return new Promise<any>((resolve) => {
       this.http.post<any>(this.config.serverDomenName+'/bom/components/add', body).subscribe(e=>{
