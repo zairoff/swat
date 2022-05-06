@@ -1,6 +1,7 @@
 # Swat
 
 Front end part of system for controling production process. (including pages for income, outcome, models, sectors, components)
+Used components of PrimeNG
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
