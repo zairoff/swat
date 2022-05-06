@@ -7,6 +7,7 @@ import { IComponent } from '../models/component.model'
 import { ITypes } from '../models/types.model'
 import { IModels } from '../models/ref.model';
 import { IBom } from '../models/bom.model';
+import { IGp } from '../models/gp';
 
 
 
@@ -15,7 +16,33 @@ import { IBom } from '../models/bom.model';
 })
 export class ProductionapiService {
 
+
   constructor(public config: ConfigService, public http: HttpClient) { }
+
+  public async getGpByDate(body: any){
+    return new Promise<IGp[]>((resolve) => {
+      this.http.post<IGp[]>(this.config.serverDomenName+'/income/gp/report', body).subscribe(e=>{
+          resolve(e);
+        })
+      })
+    }
+
+  public async getGp5(){
+    return new Promise<IGp[]>((resolve) => {
+      this.http.get<IGp[]>(this.config.serverDomenName+'/income/gp/report').subscribe(e=>{
+          resolve(e);
+        })
+      })
+    }
+
+  public async sendGP(body:any){
+    return new Promise<any>((resolve) => {
+      this.http.post<any>(this.config.serverDomenName+'/income/gp', body).subscribe(e=>{
+          resolve(e);
+        })
+      })
+    }
+
 
   public async addComponentWarehouse(body:any){
     return new Promise<any>((resolve) => {
