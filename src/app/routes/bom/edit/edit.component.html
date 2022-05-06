@@ -13,9 +13,6 @@
 
             <button type="button" pButton pRipple icon="pi pi-file-excel" (click)="exportExcel()" class="p-button-success mr-2"  pTooltip="XLS" tooltipPosition="bottom"></button>
             <button type="button" pButton pRipple icon="pi pi-file-pdf" (click)="exportPdf()" class="p-button-warning mr-2" pTooltip="PDF" tooltipPosition="bottom"></button>
-
-            <!-- <p-fileUpload mode="basic" accept="image/*" [maxFileSize]="1000000" label="Import" chooseLabel="Import" class="mr-2 inline-block"></p-fileUpload>
-            <button pButton pRipple label="Export" icon="pi pi-upload" class="p-button-help"></button> -->
         </ng-template>
     </p-toolbar>
 
@@ -52,7 +49,6 @@
         <ng-template pTemplate="body" let-component>
             <tr>
                 <td>
-                    <!-- <p-tableCheckbox [value]="component"></p-tableCheckbox> -->
                 </td>
                 <td>{{component.code}}</td>
                 <td>{{component.name}}</td>
@@ -69,7 +65,7 @@
                 <td>{{component.type}}</td>
                 <td>{{component.checkpoint}}</td>
                 <td>
-                    <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning" (click)="deleteProduct(component)"></button>
+                    <!-- <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning" (click)="deleteProduct(component)"></button> -->
                 </td>
             </tr>
         </ng-template>
@@ -86,19 +82,7 @@
 
 
 <h5>Add Component</h5>
-<!-- <p-dropdown *ngIf="allComponents && selectedComponent" [options]="allComponents" [(ngModel)]="selectedComponent.code" optionLabel="code" [filter]="true" filterBy="code"
-	[showClear]="true" placeholder="Select a Country">
-	<ng-template pTemplate="selectedItem">
-		<div class="country-item country-item-value" *ngIf="selectedComponent">
-			<div>{{selectedComponent.code}}</div>
-		</div>
-	</ng-template>
-	<ng-template let-country pTemplate="item">
-		<div class="country-item">
-			<div>{{selectedComponent.code}}</div>
-		</div>
-	</ng-template>
-</p-dropdown> -->
+
 <div class="formgroup-inline">
     <div class="field">
         <p-dropdown [options]="allComponents" [(ngModel)]="selectedComponent" optionLabel="code" [filter]="true" filterBy="code"

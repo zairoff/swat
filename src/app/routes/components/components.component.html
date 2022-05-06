@@ -4,17 +4,11 @@
     <p-toolbar styleClass="mb-4">
         <ng-template pTemplate="left">
             <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success mr-2" (click)="openNew()"></button>
-            <!-- <button pButton pRipple label="Delete" icon="pi pi-trash" class="p-button-danger" (click)="deleteSelectedProducts()" [disabled]="!selectedComponents || !selectedComponents.length"></button> -->
-
         </ng-template>
 
         <ng-template pTemplate="right">
-
             <button type="button" pButton pRipple icon="pi pi-file-excel" (click)="exportExcel()" class="p-button-success mr-2"  pTooltip="XLS" tooltipPosition="bottom"></button>
             <button type="button" pButton pRipple icon="pi pi-file-pdf" (click)="exportPdf()" class="p-button-warning mr-2" pTooltip="PDF" tooltipPosition="bottom"></button>
-
-            <!-- <p-fileUpload mode="basic" accept="image/*" [maxFileSize]="1000000" label="Import" chooseLabel="Import" class="mr-2 inline-block"></p-fileUpload>
-            <button pButton pRipple label="Export" icon="pi pi-upload" class="p-button-help"></button> -->
         </ng-template>
     </p-toolbar>
 
@@ -55,8 +49,8 @@
                 <td>{{component.specs}}</td>
                 <td>{{component.weight}}</td>
                 <td>
-                    <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2" (click)="editProduct(component)"></button>
-                    <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning" (click)="deleteProduct(component)"></button>
+                    <!-- <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2" (click)="editProduct(component)"></button> -->
+                    <!-- <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning" (click)="deleteProduct(component)"></button> -->
                 </td>
             </tr>
         </ng-template>
@@ -98,15 +92,7 @@
 
         <div class="field">
             <label for="inventoryStatus"></label>
-            <!-- <p-dropdown [(ngModel)]="component.checkpoint" inputId="checkpoint.id" [options]="checkpoints" placeholder="Select">
-                <ng-template let-option pTemplate="item">
-                    <span [class]="'product-badge status-' + option.id">{{option.name}}</span>
-                </ng-template>
-            </p-dropdown> -->
-
-            <p-dropdown [options]="checkpoints" [(ngModel)]="selectedCheckpoint" placeholder="Ishlatilish joyi" optionLabel="name" [showClear]="true" ></p-dropdown>
-
-
+                <p-dropdown [options]="checkpoints" [(ngModel)]="selectedCheckpoint" placeholder="Ishlatilish joyi" optionLabel="name" [showClear]="true" ></p-dropdown>
         </div>
 
         <div class="field">
@@ -129,10 +115,6 @@
         </div>
 
         <div class="formgrid grid">
-            <!-- <div class="field col">
-                <label for="price">Name</label>
-                <textarea pInputTextarea id="name" [(ngModel)]="component.name"></textarea>
-            </div> -->
             <div class="field col">
                 <label for="photo">Photo</label>
                 <textarea pInputTextarea id="photo" [(ngModel)]="component.photo"></textarea>
